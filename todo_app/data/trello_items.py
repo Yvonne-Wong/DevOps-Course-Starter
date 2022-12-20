@@ -1,6 +1,7 @@
 import os;
 import requests;
-from todo_app.data.classes import Item, List 
+from todo_app.data.item import Item
+from todo_app.data.list import List
 
 key = os.getenv('API_KEY')
 token = os.getenv('API_TOKEN')
@@ -43,7 +44,6 @@ def add_todo(title: str):
     response = requests.post(f'{base_url}/cards', params=auth_params | query_params)
 
     if response.status_code == 200:
-        print(response.json())
         return response.json()
     else:
         print("Error from server: " + str(response.content))
