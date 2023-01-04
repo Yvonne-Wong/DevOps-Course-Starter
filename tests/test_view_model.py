@@ -1,5 +1,9 @@
-from todo_app.data import ViewModel, Item, List
+from todo_app.data.classes.item import Item
+from todo_app.data.classes.list import List
+from todo_app.data.classes.viewmodel import ViewModel
+
 import pytest
+
 
 @pytest.fixture
 def view_model():
