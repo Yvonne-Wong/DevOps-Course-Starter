@@ -1,7 +1,7 @@
 import os;
 import requests;
-from todo_app.data.item import Item
-from todo_app.data.list import List
+from todo_app.data.classes.item import Item
+from todo_app.data.classes.list import List
 
 key = os.getenv('API_KEY')
 token = os.getenv('API_TOKEN')
