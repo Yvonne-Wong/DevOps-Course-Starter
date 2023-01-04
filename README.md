@@ -57,3 +57,25 @@ You should see output similar to the following:
 ```
 
 Now visit [`http://localhost:5000/`](http://localhost:5000/) in your web browser to view the app.
+
+## Running tests
+
+Firstly install pytest as a dev dependency by running the following command:
+
+```bash
+$ poetry add pytest --dev
+```
+
+To add new tests, create a file in the tests folder and make sure it starts with test\_ or it won't be picked up.
+This naming convention extends to all test methods defined in the test file.
+
+```Running specific tests
+* To run tests within a module: run
+$ pytest <directory>/<filename.py>, e.g. poetry run pytest tests/test_view_model.py
+
+* To run tests within a directory: run
+$ pytest <directory> e.g. poetry run pytest tests
+
+* To run a specific test within a module: run
+$ poetry run pytest <module>::<method> e.g. poetry run pytest tests/test_view_model.py::test_view_model_to_do_items_returns_to_do_items
+```
